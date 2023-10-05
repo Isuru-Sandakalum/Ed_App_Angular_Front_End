@@ -1,0 +1,76 @@
+<div class="center-content">
+<br>
+<br>
+<br>
+<br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <p class="textHead1"> Welcome back to learning </p>
+        <p class="textBody">Sign in to continue your work as usual and experience best from us.
+          Granting many knowledge and opportunities to grow your self without any assistance.</p>
+
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+
+  <br>
+
+  <div>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-title>Sign in</mat-card-title>
+      <mat-card-subtitle>Join E guru family</mat-card-subtitle>
+
+      <form [formGroup]="loginForm" class="example-form" >
+        <div class="inputBody">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">user Name</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="userName" placeholder="Alex costa">
+          </div>
+
+        </div>
+
+        <div class="inputBody2">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-labe2">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput2" formControlName="password" placeholder="Type your password">
+          </div>
+        </div>
+      </form>
+
+      <mat-card-content>
+        <p> You have no account ? <a href="#" routerLink="/signup">Create a profile</a></p>
+        <br>
+        <button mat-button id="subBtn" (click)="signEventStudent()">Student</button>
+        <button mat-button id="subBtn2" (click)="signEventTeacher()">Admin</button>
+      </mat-card-content>
+
+    </mat-card-content>
+  </mat-card>
+
+  <div class="container" id="footer" >
+    <div class="row">
+      <div class="col text-center textBox">
+
+        <pre class="text3">Privacy Policy</pre>
+        <pre class="text4"> | </pre>
+        <pre class="text3">&copy; Copyright All Right reserved</pre>
+        <pre class="text4"> | </pre>
+        <pre class="text3">Terms & Conditions</pre>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+

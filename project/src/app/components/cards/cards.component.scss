@@ -1,0 +1,93 @@
+.card{
+  height: 500px;
+  margin:7px;
+}
+
+.card:hover{
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+
+}
+
+img{
+  width: auto;
+  height: auto;
+}
+.card-title{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.card-title:hover{
+  transform: scale(1.1);
+  color: #E90064;
+}
+.text1{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.text2{
+  font-weight: bold;
+  width: fit-content;
+  font-size: 10px;
+  color: gray;
+  opacity: 80%;
+}
+
+.text3{
+  font-size: 10px;
+
+}
+
+.rateBar{
+  text-align: left;
+}
+
+.fa-solid{
+  color: #F7C04A;
+}
+
+.sliderIcon{
+  color: #E90064;
+}
+
+
+
+
+.topics{
+  font-size: 30px;
+  margin-top: 40px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.addToCart{
+
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  height: 30px;
+  width: 200px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  position: absolute;bottom: -0%;
+  margin-bottom: 15px;
+}
+
+.addToCart:hover{
+  background-color: #E90064;
+  box-shadow: 0px 15px 20px rgba(233, 0, 100, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#cartBtn{
+  color: #E90064;
+}

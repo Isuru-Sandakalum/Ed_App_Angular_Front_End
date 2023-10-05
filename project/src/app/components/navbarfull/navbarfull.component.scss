@@ -1,0 +1,112 @@
+
+
+nav{
+  padding:15px;
+  background: white;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+  height: 90px;
+
+}
+
+.nav-link{
+  color: #E90064;
+  font-size: medium;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.nav-link:hover{
+  background: #E90064;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+
+
+}
+
+.navbar-brand{
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+#navDisable:hover{
+  background: none;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.profileBtn{
+  background:white;
+  border: 3px solid #E90064;
+  width: 100px;
+  height: 40px;
+
+
+}
+
+.proIcon{
+  color: black;
+}
+
+.proIcon:hover{
+  color: #E90064;
+}
+
+.navBtn{
+  margin: 15px;
+  background: #E90064;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.navBtn:hover{
+  color: #E90064;
+}
+
+.navBtn2{
+  margin: 15px;
+  background: mediumpurple;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navBtn2:hover{
+  color: #E90064;
+
+}
+
+
+#dropBtn{
+  width: 180px;
+  height: 50px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item{
+  font-size: 15px;
+}
+
+.proHead{
+  font-size: 8px;
+  font-weight: bold;
+  color: #65647C;
+}
+
+
+
+

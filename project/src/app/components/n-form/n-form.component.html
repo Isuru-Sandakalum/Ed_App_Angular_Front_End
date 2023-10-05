@@ -1,0 +1,44 @@
+<h2><i class="fa-brands fa-studiovinari" style="color: #E90064"></i> e guru</h2>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+  </div>
+  <div class="form-container sign-in-container">
+    <form [formGroup]="courseAddForm">
+      <h1>{{pageType}}</h1>
+      <span>{{pageType2}}</span>
+
+      <input type="text" placeholder="Course Name" formControlName="courseName"/>
+      <span class="validators"*ngIf="courseName && courseName.invalid">This filed must be filled !</span>
+
+      <input type="text" placeholder="Teacher" formControlName="teacher"/>
+      <span class="validators"*ngIf="teacher && teacher.invalid">This filed must be filled !</span>
+
+      <input type="text" placeholder="Price" formControlName="coursePrice"/>
+      <span class="validators"*ngIf="coursePrice && coursePrice.invalid">This filed must be filled !</span>
+
+      <textarea type="text" placeholder="Description" style="height: 100px" formControlName="description"></textarea>
+      <span class="validators"*ngIf="description && description.invalid">This filed must be filled !</span>
+
+      <br>
+
+      <div class="button group" style="display: flex">
+        <button (click)="saveData()" [disabled]="courseAddForm.invalid">{{buttonType}}</button>
+        <button (click)="clearData()">Reset</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <img class="formPic" src="assets/img/pic6.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer-light></app-footer-light>

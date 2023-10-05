@@ -1,0 +1,146 @@
+<app-navbarfull></app-navbarfull>
+<div class="container">
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h1>Pay your bill</h1>
+      <br>
+      <div class="container" id="payment">
+
+        <form [formGroup]="paymentForm">
+
+          <div class="row" style="padding:10px;">
+            <p id="payment_value"></p>
+          </div>
+          <br>
+          <div class="row">
+
+
+            <div class="col">
+
+              <h3 class="title">billing Information</h3>
+
+              <div class="inputBox">
+                <span>full name :</span>
+                <input type="text" placeholder="Name" formControlName="fullName">
+                <span class="validators"*ngIf="fullName && fullName.invalid">This filed must be filled !</span>
+              </div>
+              <div class="inputBox">
+                <span>email :</span>
+                <input type="email" placeholder="example@example.com"formControlName="email">
+                <span class="validators"*ngIf="email && email.invalid">This filed must be filled !</span>
+              </div>
+
+              <div class="inputBox">
+                <span>address :</span>
+                <input type="text" placeholder="room - street - locality"formControlName="address">
+                <span class="validators"*ngIf="address && address.invalid"></span>
+              </div>
+              <div class="inputBox">
+                <span>city :</span>
+                <input type="text" placeholder="Your city"formControlName="city">
+                <span class="validators"*ngIf="city && city.invalid">This filed must be filled !</span>
+              </div>
+
+              <div class="flex">
+                <div class="inputBox">
+                  <span>District :</span>
+                  <input type="text" placeholder="Ex:puttlam"formControlName="district">
+                  <span class="validators"*ngIf="district && district.invalid">This filed must be filled !</span>
+
+                </div>
+                <div class="inputBox">
+                  <span>Postal code :</span>
+                  <input type="text" placeholder="61000"formControlName="postalCode">
+                  <span class="validators"*ngIf="postalCode && postalCode.invalid">This filed must be filled !</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col">
+
+              <h3 class="title">Your Bill : ${{grandTotal}}</h3>
+
+              <div class="inputBox">
+                <span>cards accepted :</span>
+                <i class="fa-brands fa-cc-visa fa-2x"></i>
+                <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+              </div>
+              <div class="inputBox">
+                <span>name on card :</span>
+                <input type="text" placeholder="Mr. isuru sandakalum"formControlName="cardName">
+                <span class="validators"*ngIf="cardName && cardName.invalid">This filed must be filled !</span>
+              </div>
+              <div class="inputBox">
+                <span>credit card number :</span>
+                <input type="text" placeholder="1111-2222-3333-4444"formControlName="number">
+                <span class="validators"*ngIf="number && number.invalid">This filed must be filled !</span>
+              </div>
+              <div class="inputBox">
+                <span>exp month :</span>
+                <input type="text" placeholder="january"formControlName="exMonth">
+                <span class="validators"*ngIf="exMonth && exMonth.invalid">This filed must be filled !</span>
+              </div>
+
+              <div class="flex">
+                <div class="inputBox">
+                  <span>exp year :</span>
+                  <input type="text" placeholder="2022"formControlName="exYear">
+                  <span class="validators"*ngIf="exYear && exYear.invalid">This filed must be filled !</span>
+                </div>
+                <div class="inputBox">
+                  <span>CVV :</span>
+                  <input type="text" placeholder="1234"formControlName="cvv">
+                  <span class="validators"*ngIf="cvv && cvv.invalid">This filed must be filled !</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <button type="button" class="submit-btn" (click)="checkout()" [disabled]="paymentForm.invalid"> proceed to checkout</button>
+          <button type="button" class="clear-btn" (click)="reset()"> Clear </button>
+
+        </form>
+
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<div [hidden]="isVisible" class="card">
+  <div class="card-body text-center">
+    <h3 class="card-title m-b-0">All My Courses</h3>
+  </div>
+
+  <div class="table-responsive" style="height: 290px; overflow: auto">
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+        <th>Course Name</th>
+        <th>Teacher</th>
+        <th>Materials</th>
+      </tr>
+      </thead>
+      <tbody class="customtable">
+      <tr *ngFor="let items of product">
+        <td>{{items.courseName}}</td>
+        <td>{{items.teacher}}</td>
+        <td> <button class="btn btn-primary"> Download </button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="redirectBtn" routerLink="/home">Home</button>
+</div>
+
+
+<app-footer></app-footer>
+
+

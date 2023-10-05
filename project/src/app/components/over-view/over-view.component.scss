@@ -1,0 +1,26 @@
+.card {
+  text-align: center;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+td {
+padding: 5px;
+}
+
+td:hover{
+  background-color: mediumpurple;
+  color: white;
+}
+
+
+img{
+  width: 150px;
+  height: 150px;
+}

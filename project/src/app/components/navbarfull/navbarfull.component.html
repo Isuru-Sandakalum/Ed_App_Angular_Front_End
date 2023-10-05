@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-brands fa-studiovinari" style="color: #E90064"></i> e guru</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" id="navDisable" href="#" style="width: 170px"></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#" routerLink="/home">Home</a>
+        </li>
+
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jobs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">My courses</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/signin">Mode</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Mobile development</a></li>
+            <li><a class="dropdown-item" href="#">History</a></li>
+            <li><a class="dropdown-item" href="#">Science</a></li>
+            <li><a class="dropdown-item" href="#">Maths</a></li>
+            <li><a class="dropdown-item" href="#">Web development</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Performing Art</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+
+      <!--Notification btn-->
+      <button type="button" class="navBtn2 position-relative">
+        <a href="#" class="proIcon"><i class="fa-solid fa-bell" style="color: white;"></i></a>
+      </button>
+
+      <!--Cart btn-->
+      <button type="button" class="navBtn position-relative" (click)="cartBtn()">
+        <i id="iconPack" class="fa-solid fa-cart-shopping" style="color: white;"></i>
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{totalItem}}
+        <span class="visually-hidden">New alerts</span>
+        </span>
+      </button>
+
+
+      <!--profile-->
+      <div class="btn-group ">
+        <button id="dropBtn" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+          <b>{{userDetails.userName}}</b>
+        </button>
+
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#"  routerLink="/signin" (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+</nav>

@@ -1,0 +1,158 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <nav class="main-menu">
+        <ul>
+          <br>
+          <li class="has-subnav">
+
+            <a href="#">
+          <span class="nav-text" style="text-align: center;padding-left: 5px">
+                          Admin
+                          </span>
+            </a>
+            <br>
+          </li>
+
+          <li class="has-subnav">
+            <a>
+              <div class="card">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <span class="nav-text">
+                {{userDetails.userName}}
+                          </span>
+            </a>
+          </li>
+
+          <hr>
+
+          <li class="has-subnav">
+            <a href="#">
+          <span class="nav-text" style="text-align: center;padding-left: 5px">
+                        Option Panel
+                          </span>
+            </a>
+          </li>
+          <br>
+
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-gauge"></i>
+              </div>
+              <span class="nav-text">
+                        Dashboard
+                          </span>
+            </a>
+          </li>
+
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-house" routerLink="/home"></i>
+              </div>
+              <span class="nav-text" routerLink="/home">
+                        Home
+                          </span>
+            </a>
+          </li>
+
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="nav-text">
+                        Course data
+                          </span>
+            </a>
+          </li>
+
+          <br>
+          <br>
+          <li class="has-subnav">
+            <a href="#">
+          <span class="nav-text topics" style="text-align: center;padding-left: 5px">
+                        Users
+                          </span>
+
+            </a>
+          </li>
+          <hr>
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <span class="nav-text">
+                        Check users
+                          </span>
+            </a>
+          </li>
+
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <span class="nav-text">
+                        settings
+                          </span>
+            </a>
+          </li>
+
+
+        </ul>
+        <ul class="logout">
+          <li class="has-subnav">
+            <a href="#">
+              <div class="card">
+                <i class="fa-solid fa-power-off" (click)="logout()"></i>
+              </div>
+              <span class="nav-text" (click)="logout()">
+                        Log out
+                          </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="col-md-10">
+
+
+      <div class="row">
+
+        <div class="col-md-10">
+
+          <div class="cardT">
+            <br>
+            <a class="logo" style="color: black" href="#"><i class="fa-brands fa-studiovinari"
+                                                             style="color: #E90064"></i> e guru</a>
+            <p class="head">Admin Panel</p>
+            <br>
+          </div>
+          <app-table></app-table>
+        </div>
+
+        <div class="col-md-2">
+          <br>
+          <a href="https://logwork.com/current-time-in-colombo-sri-lanka-western" class="clock-widget-text"
+             data-timezone="Asia/Colombo" data-language="en">Colombo, Sri Lanka</a>
+          <br>
+          <br>
+
+          <br>
+          <br>
+          <app-over-view></app-over-view>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<app-navbarfull></app-navbarfull>
+<br>
+<app-searchbar></app-searchbar>
+<br>
+<br>
+<br>
+
+<ng-container *ngIf="product.length !=0">
+
+  <div class="container">
+    <div class="card-table">
+      <div class="card-course">
+        <table class="table table table-striped">
+
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Course Name</th>
+            <th> Description</th>
+            <th> Price</th>
+            <th> Quantity</th>
+            <th> Total</th>
+            <th> Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let items of product;let i = index">
+            <td style="width: 15%">{{i + 1}}</td>
+            <td style="width: 15%">{{items.courseName}}</td>
+            <td style="width: 25%">{{items.description}}</td>
+            <td style="width: 15%">{{items.coursePrice}}</td>
+            <td style="width: 15%">{{items.quantity}}</td>
+            <td style="width: 15%">{{items.total}}</td>
+            <td>
+              <button class="delBtn" (click)="removeCartItem(items)"><i class="fa-solid fa-trash fa-2x"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"><strong>Grand Total : ${{grandTotal}} </strong></td>
+            <td>
+              <button class="emptyBtn" (click)="removeAll()">Empty Cart</button>
+            </td>
+            <td>
+              <button class="shopMoreBtn" routerLink="/home">Shop More</button>
+            </td>
+            <td>
+              <button class="checkBtn" routerLink="/payment">Check out</button>
+            </td>
+          </tr>
+
+          </tbody>
+
+
+        </table>
+      </div>
+    </div>
+  </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="product.length == 0">
+
+  <div class="container">
+
+    <div class="card">
+      <h2 class="card-title"> My cart</h2>
+    </div>
+    <div class="center">
+      <h4>Oops! Your Cart is Empty</h4>
+      <img src="assets/img/pic3.jpg">
+
+      <h5> Add items now</h5>
+      <button class="shopBtn" routerLink="/home">Shop Now</button>
+    </div>
+
+  </div>
+
+</ng-container>
+
+
+<br>
+<app-footer></app-footer>

@@ -1,0 +1,630 @@
+<!--Topic1-->
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10 topicBack"><P class="topics">Recommended for you</P></div>
+  <div class="col-md-1"></div>
+</div>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="card" style="width: 18rem;"  *ngFor="let courses of courses">
+                  <img src="assets/img/b.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                  <h5 class="card-title">{{courses.courseName}}</h5>
+
+                  <p class="card-title">Price ${{courses.coursePrice}}.00</p>
+
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+
+                  <p class="text3">{{courses.description}}</p>
+
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                      <h5 class="text1">Instructor {{courses.teacher}}</h5>
+                    </div>
+                    <div  class="col-md-1 "></div>
+                  </div>
+
+
+                  <P class="text2">Rating 5/5
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </P>
+
+
+                </div>
+              </div>
+
+              <div class="row mx-auto">
+                <div class="col-md-12">
+                  <button class="addToCart" (click)="addToCart(courses)">Add to card</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+</div>
+
+
+<!--&lt;!&ndash;Card body 1&ndash;&gt;-->
+<!--<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item active">-->
+<!--      <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-1"></div>-->
+<!--          <div class="col-md-10">-->
+<!--            <div class="row row-cols-1 row-cols-md-3 g-4">-->
+<!--              <div class="col">-->
+
+<!--                <ng-container *ngFor="let items of courses">-->
+<!--                  <div class="card h-100">-->
+<!--                    <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body">-->
+<!--                      <div class="container-fluid">-->
+<!--                        <div class="row">-->
+<!--                          <h5 class="card-title">{{courses.courseName}}</h5>-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                          <div class="col-md-5 text1"> </div>-->
+<!--                          <div class="col-md-1"></div>-->
+<!--                          <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                          <div class="col-md-1"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="row rateBar">-->
+
+<!--                          <div class="col-md-8">-->
+<!--                            <P class="text2">Rating 5/5-->
+
+<!--                              <i class="fa-solid fa-star"></i>-->
+<!--                              <i class="fa-solid fa-star"></i>-->
+<!--                              <i class="fa-solid fa-star"></i>-->
+<!--                              <i class="fa-solid fa-star"></i>-->
+<!--                              <i class="fa-solid fa-star"></i>-->
+<!--                            </P>-->
+
+<!--                          </div>-->
+<!--                          <div class="col-md-4">-->
+<!--                            <p class="text2"> (20,000)</p>-->
+<!--                          </div>-->
+
+
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                          <p class="text3"></p>-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+
+<!--                          <h3><b>$.00</b></h3>-->
+<!--                          <button class="addToCart"> Add to cart </button>-->
+<!--                        </div>-->
+<!--                      </div>-->
+
+
+<!--                    </div>-->
+<!--                    <div class="card-footer">-->
+<!--                      <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </ng-container>-->
+
+
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title"></h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1"></div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3"></p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title"></h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1"></div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3"></p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+<!--          <div class="col-md-1">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--    <div class="carousel-item">-->
+<!--      <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-1"></div>-->
+<!--          <div class="col-md-10">-->
+<!--            <div class="row row-cols-1 row-cols-md-3 g-4">-->
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+<!--                        <h5 class="card-title"></h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1"></div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title">Java Language basics and plugins</h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1">Jonathan walker</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title">Java Language basics and plugins</h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1">Jonathan walker</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+
+
+<!--          </div>-->
+<!--          <div class="col-md-1">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+
+<!--    <div class="carousel-item">-->
+<!--      <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-1"></div>-->
+<!--          <div class="col-md-10">-->
+<!--            <div class="row row-cols-1 row-cols-md-3 g-4">-->
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+<!--                        <h5 class="card-title">Java Language basics and plugins</h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1">Jonathan walker</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title">Java Language basics and plugins</h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1">Jonathan walker</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="col">-->
+<!--                <div class="card h-100">-->
+<!--                  <img src="assets/img/thumb1.jpg" class="card-img-top" alt="...">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="container-fluid">-->
+<!--                      <div class="row">-->
+
+<!--                        <h5 class="card-title">Java Language basics and plugins</h5>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-5 text1">Jonathan walker</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-5 text2">12hours 20 video clips</div>-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="row rateBar">-->
+
+<!--                        <div class="col-md-8">-->
+<!--                          <P class="text2">Rating 5/5-->
+
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                            <i class="fa-solid fa-star"></i>-->
+<!--                          </P>-->
+
+<!--                        </div>-->
+<!--                        <div class="col-md-4">-->
+<!--                          <p class="text2"> (20,000)</p>-->
+<!--                        </div>-->
+
+
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <p class="text3">Here you can learn java programing language basics and plugins with real world-->
+<!--                          examples</p>-->
+<!--                      </div>-->
+<!--                      <div class="row">-->
+<!--                        <h3><b> $30.00</b></h3>-->
+<!--                        <button class="addToCart"> Add to cart </button>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+
+<!--                  </div>-->
+<!--                  <div class="card-footer">-->
+<!--                    <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+
+
+<!--          </div>-->
+<!--          <div class="col-md-1">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">-->
+<!--    <i class="fa-solid fa-angles-left fa-2x sliderIcon"></i>-->
+<!--  </button>-->
+<!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">-->
+<!--    <i class="fa-solid fa-angles-right fa-2x sliderIcon"></i>-->
+<!--  </button>-->
+
+<!--</div>-->
+<!--<br>-->
+
+
+
+
+
+
+
+
